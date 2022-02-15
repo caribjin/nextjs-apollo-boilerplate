@@ -1,0 +1,104 @@
+{
+    "name": "nextjs-apollo-boilerplate",
+    "version": "0.1.0",
+    "description": "nextjs apollo boilerplate",
+    "author": "YoungJin Lim <caribjin@gmail.com>",
+    "license": "MIT",
+    "private": true,
+    "keywords": ["javascript", "graphql", "boilerplate", "typescript", "apollo", "eslint", "reactjs", "nextjs", "prettier", "emotion", "chakra-ui"],
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "start:sb": "start-storybook -p 4004",
+        "build:sb": "build-storybook",
+        "svgr": "npx @svgr/cli -d src/components/icons --ignore-existing --icon --typescript public/icons",
+        "build:analyze": "ANALYZE=true yarn build",
+        "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+        "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
+        "test": "jest -c test/jest.config.js"
+    },
+    "dependencies": {
+        "@apollo/client": "^3.3.7",
+        "@chakra-ui/react": "^1.1.4",
+        "@emotion/react": "^11.1.4",
+        "@emotion/styled": "^11.0.0",
+        "@next/bundle-analyzer": "^12.0.10",
+        "@reduxjs/toolkit": "^1.6.0",
+        "axios": "^0.21.1",
+        "framer-motion": "^3.2.1",
+        "graphql": "^15.4.0",
+        "isomorphic-ws": "^4.0.1",
+        "next": "^12.0.10",
+        "next-auth": "^4.2.1",
+        "next-compose-plugins": "^2.2.1",
+        "next-translate": "^1.3.3",
+        "prettier": "^2.2.1",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "react-redux": "^7.2.4",
+        "styled-components": "^5.2.1",
+        "subscriptions-transport-ws": "^0.11.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.17.2",
+        "@next/eslint-plugin-next": "^12.0.10",
+        "@storybook/addon-actions": "^6.4.19",
+        "@storybook/addon-essentials": "^6.4.19",
+        "@storybook/addon-knobs": "^6.4.0",
+        "@storybook/addon-links": "^6.4.19",
+        "@storybook/react": "^6.4.19",
+        "@svgr/cli": "^5.5.0",
+        "@testing-library/react": "^12.1.2",
+        "@testing-library/react-hooks": "^7.0.2",
+        "@types/jest": "^27.4.0",
+        "@types/node": "^14.14.13",
+        "@types/react": "^17.0.0",
+        "@types/react-dom": "^17.0.0",
+        "@types/react-redux": "^7.1.16",
+        "@types/styled-components": "^5.1.22",
+        "@typescript-eslint/eslint-plugin": "^5.10.2",
+        "@typescript-eslint/parser": "^5.10.2",
+        "apollo": "^2.32.1",
+        "babel-loader": "^8.2.2",
+        "babel-plugin-styled-components": "^1.12.0",
+        "dotenv": "^8.2.0",
+        "eslint": "^7.15.0",
+        "eslint-config-prettier": "^7.0.0",
+        "eslint-plugin-jest": "^26.1.0",
+        "eslint-plugin-prettier": "^3.2.0",
+        "husky": "^4.3.7",
+        "identity-obj-proxy": "^3.0.0",
+        "isomorphic-unfetch": "^3.1.0",
+        "jest": "^27.5.1",
+        "lint-staged": "^10.5.3",
+        "nock": "^13.0.6",
+        "style-loader": "^2.0.0",
+        "ts-jest": "^26.4.4",
+        "tsconfig-paths-webpack-plugin": "^3.5.2",
+        "typescript": "^4.5.5"
+    },
+    "babel": {
+        "presets": [
+            "next/babel"
+        ],
+        "plugins": [
+            [
+                "styled-components",
+                {
+                    "ssr": true
+                }
+            ]
+        ]
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "yarn lint -- --quiet --fix"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    }
+}

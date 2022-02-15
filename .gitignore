@@ -1,0 +1,41 @@
+.idea/
+.vscode/
+.cert
+.esbuild
+.serverless
+.next
+.vercel
+.DS_Store
+node_modules/
+storybook-static/
+build/
+dist/
+tmp/
+temp/
+/serverless.ts
+.npm
+/locales
+schema.graphql
+
+# environment variables
+.env.local
+.env.*.local
+!.env.example
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Apollo
+/generated
+
+# logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+nerna-debug.log*
+
+# Storybook
+.storybook
+*.stories.*
